@@ -1,0 +1,15 @@
+{
+  "name": "jamb",
+  "version": "1.0.0",
+  "description": "jamb rule - http://www.ptt.rs/korisnici/n/i/nikolinv/rules.htm",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve ./public",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mateo vukusic",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^6.4.3"
+  }
+}

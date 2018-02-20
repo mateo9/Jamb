@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jamb</title>
+	<link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+	<div class="table">
+	<table border="5" cellspacing="0" cellpadding="0">
+		<tr>
+			<td class="nclass">
+			Jamb
+		    </td>
+			<td class="nclass">
+				Down
+			</td>
+			<td class="nclass">
+				Up
+			</td>
+			<td class="nclass">
+				Up and Down
+			</td>
+			<td class="nclass">
+				Call
+			</td>
+		</tr>
+		<tr>
+			<td class="nclass">1</td>
+			<td>
+				<input type="button" id="one-down" onclick="convert(results)" class="btn-results">
+		    </td>
+			<td>
+			    <input type="button" id="one-up" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+			    <input type="button" id="one-u-d" onclick="convert(results)" class="btn-results u-d">
+		    </td>
+			<td>
+			    <input type="button" id="one-call" onclick="convert(results),oneBell()" class="call">
+		    </td>
+		</tr>
+		<tr>
+			<td class="nclass">2</td>
+			<td>
+				<input type="button" id="two-down" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="two-up" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="two-u-d" onclick="convert(results)" class="btn-results u-d">
+			</td>
+			<td>
+				<input type="button" id="two-call" onclick="convert(results),twoBell()" class="call">
+			</td>
+		</tr>
+		<tr>
+			<td class="nclass">3</td>
+			<td>
+				<input type="button" id="three-down" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="three-up" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="three-u-d" onclick="convert(results)" class="btn-results u-d">
+			</td>
+			<td>
+				<input type="button" id="three-call" onclick="convert(results),threeBell()" class="call">
+			</td>
+		</tr>
+		<tr>
+			<td class="nclass">4</td>
+			<td>
+			<input type="button" id="four-down" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="four-up" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="four-u-d" onclick="convert(results)" class="btn-results u-d">
+			</td>
+			<td>
+				<input type="button" id="four-call" onclick="convert(results),fourBell()" class="call">
+			</td>
+		</tr>
+		<tr>
+			<td class="nclass">5</td>
+			<td>
+				<input type="button" id="five-down" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="five-up" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="five-u-d" onclick="convert(results)" class="btn-results u-d">
+			</td>
+			<td>
+				<input type="button" id="five-call" onclick="convert(results),fiveBell()" class="call">
+			</td>
+		</tr>
+		<tr>
+			<td class="nclass">6</td>
+			<td>
+				<input type="button" id="six-down" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="six-up" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="six-u-d" onclick="convert(results)" class="btn-results u-d">
+			</td>
+			<td>
+				<input type="button" id="six-call" onclick="convert(results),sixBell()" class="call">
+			</td>
+		</tr>
+		<tr class="nclass">
+			<td>Sum(1-6)</td>
+			<td id="sum-num-down">
+			</td>
+			<td id="sum-num-up">
+			</td>
+			<td id="sum-num-up-down">
+			</td>
+			<td id="sum-num-bell">
+			</td>
+		</tr>
+		<tr>
+			<td class="nclass">Max</td>
+			<td>
+				<input type="button" id="max-down" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="max-up" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="max-u-d" onclick="convert(results)" class="btn-results u-d">
+			</td>
+			<td>
+				<input type="button" id="max-call" onclick="convert(results),maxBell()" class="call">
+			</td>
+		</tr>
+		<tr>
+			<td class="nclass">Min</td>
+			<td>
+				<input type="button" id="min-down" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="min-up" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="min-u-d" onclick="convert(results)" class="btn-results u-d">
+			</td>
+			<td>
+				<input type="button" id="min-call" onclick="convert(results),minBell()" class="call">
+			</td>
+		</tr>
+		<tr class="nclass">
+			<td>Max-Min</td>
+			<td id="max-min-down">
+			</td>
+			<td id="max-min-up">
+			</td>
+			<td id="max-min-up-down">
+			</td>
+			<td id="max-min-bell">
+			</td>
+		</tr>
+		<tr>
+			<td class="nclass">Tris</td>
+			<td>
+			<input type="button" id="toak-down" onclick="convert(results)" class="btn-results">
+		    </td>
+			<td>
+				<input type="button" id="toak-up" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="toak-u-d" onclick="convert(results)" class="btn-results u-d">
+			</td>
+			<td>
+				<input type="button" id="toak-call" onclick="convert(results),toakBell()" class="call">
+			</td>
+		</tr>
+		<tr>
+			<td class="nclass">Straight</td>
+			<td>
+				<input type="button" id="straight-down" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="straight-up" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="straight-u-d" onclick="convert(results)" class="btn-results u-d">
+			</td>
+			<td>
+				<input type="button" id="straight-call" onclick="convert(results),straightBell()" class="call">
+			</td>
+		</tr>
+		<tr>
+			<td class="nclass">Full</td>
+			<td>
+				<input type="button" id="full-down" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="full-up" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="full-u-d" onclick="convert(results)" class="btn-results u-d">
+			</td>
+			<td>
+				<input type="button" id="full-call" onclick="convert(results),fullBell()" class="call">
+			</td>
+		</tr>
+		<tr>
+			<td class="nclass">Poker</td>
+			<td>
+				<input type="button" id="poker-down" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="poker-up" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="poker-u-d" onclick="convert(results)" class="btn-results u-d">
+			</td>
+			<td>
+				<input type="button" id="poker-call" onclick="convert(results),pokerBell()" class="call">
+			</td>
+		</tr>
+		<tr>
+			<td class="nclass">Jamb</td>
+			<td>
+				<input type="button" id="jamb-down" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="jamb-up" onclick="convert(results)" class="btn-results">
+			</td>
+			<td>
+				<input type="button" id="jamb-u-d" onclick="convert(results)" class="btn-results u-d">
+			</td>
+			<td>
+				<input type="button" id="jamb-call" onclick="convert(results),jambBell()" class="call">
+			</td>
+		</tr>
+		<tr class="nclass">
+			<td>Sum</td>
+			<td id="sum-down">
+			</td>
+			<td id="sum-up">
+			</td>
+			<td id="sum-up-down">
+			</td>
+			<td id="sum-bell">
+			</td>
+			<td id="sum-final">
+			</td>
+		</tr>
+	</table>
+</div>
+</div>
+	<div class="row">
+		<img src="" alt="" class="dice"">
+		<img src="" alt="" class="dice" width="70px" height="70px">
+		<img src="" alt="" class="dice" width="70px" height="70px">
+		<img src="" alt="" class="dice" width="70px" height="70px">
+		<img src="" alt="" class="dice" width="70px" height="70px">
+	</div>
+<div class="buttons">
+	<button type="button" id="dice-btn" onclick="random()"  class="">Dice!</button>
+</div>
+<script type="text/javascript" src="./src/app.js"></script>
+</body>
+</html>
+
